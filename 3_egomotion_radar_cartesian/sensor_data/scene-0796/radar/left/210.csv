@@ -1,0 +1,2 @@
+x,y,vx,vy,vx_comp,vy_comp,x_rms,y_rms,vx_rms,vy_rms,rcs,pdh0,dyn_prop,ambig_state,valid_state
+44.0,19.299999237060547,5.0,0.0,0.10234612971544266,0.044892728328704834,0.616,0.794,0.288,0.011,-4.0,3.0,0.0,1.0,4.0
