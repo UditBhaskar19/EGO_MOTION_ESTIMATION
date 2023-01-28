@@ -16,7 +16,7 @@ Here the ego-motion estimation is performed from the **wheel speeds** and **stee
 
 ### 1. Inputs Considered and Required Outputs
 ### 2. High Level Architecture
-   - <ins>Wheel Speed Conversion</ins> : Convert wheel speed input signals from rpm to m/s
+   - **Wheel Speed Conversion** : Convert wheel speed input signals from rpm to m/s
    - <ins>Wheel Coordinates Computation</ins> : Compute wheel locations w.r.t the vehicle wheel base center. Ideally these should be determined from some calibration procedure
    - <ins>Wheel Steer Angle Computation</ins> : Compute Front Left and Front Right wheel steer angles from raw inpute steering signal
    - <ins>Valid Wheel Speed Selection by Gating</ins> : Due to road conditions and other environmental effects some wheels might be prone to skidding and slipping. Hence a gating procedure is introduced here to ensure that the wheel speed signal that are most likely corrupted are ignored for further processing. 
