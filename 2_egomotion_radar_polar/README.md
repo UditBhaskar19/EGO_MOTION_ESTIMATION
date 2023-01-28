@@ -66,4 +66,4 @@ $\sqrt{3x-1}+(1+x)^2$
 $\vr_(pred) = -( v_x * sin(theta_(meas)) + v_y * cos(theta_(meas)) )$
 
 
-a_$_{ten\ inches\ high}$
+$\a_{ten\ inches\ high}$
