@@ -15,7 +15,7 @@ In this project [RadarScenes](https://radar-scenes.com/) dataset is used for val
 
 
 ### 2. Inputs Considered and Required Outputs
-The inputs are the radar measurements in polar coordinates. A detailed summary of all the required inputs and the outputs is as follows.
+The inputs are the radar measurements in polar coordinates. A detailed summary of all the required inputs and the outputs are as follows.
 <br>
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/1_inputs_outputs.PNG)
 
