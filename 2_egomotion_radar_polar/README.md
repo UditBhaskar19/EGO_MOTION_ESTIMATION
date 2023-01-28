@@ -37,7 +37,7 @@ The below animation is a brief sequence of radar frames. It can be observed that
 
 ### 5. Analysis
 In this section some analysis is done to highlight the importance of two modules in the architecture: **Stationary Measurement Identification** & **Clutter Removal by RANSAC**
-   - First, two estimation results are compared, one with and the other without the above two mentioned modules. The plot shows that the system would result in a total failure without these two modules. Eventhough the estimated vx works to some extent, the estimated yaw-rate is 'unrecognizable'.<br>
+   - First, two estimation results are compared, one with and the other without the above two mentioned modules. The plot shows that the system would result in a total failure without these two modules.<br><br>
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/plot4.PNG)
 
 
