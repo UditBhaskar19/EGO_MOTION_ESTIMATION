@@ -6,7 +6,7 @@ This repository contains **design** and **implementation** of ego-motion estimat
 ### [P1 - Ego-motion estimation from wheel speeds and steering angle](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/tree/main/1_egomotion_wheel_speed)
 [![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/readme_artifacts/P1_cover_img.PNG)](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/tree/main/1_egomotion_wheel_speed)
 
-### P2 - Ego-motion estimation from radar sensors ( raw radar measurements )
+### P2 - Ego-motion estimation from radar sensors ( raw radar point cloud )
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/readme_artifacts/P2_cover_img.PNG)
 
-### P3 - Ego-motion estimation from radar sensors ( filtered radar measurements )
+### P3 - Ego-motion estimation from radar sensors ( filtered radar point cloud )
