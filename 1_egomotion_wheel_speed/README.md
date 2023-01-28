@@ -8,7 +8,7 @@ Here the ego-motion estimation is performed from the **wheel speeds** and **stee
 
  ### 1. Inputs Considered and Required Outputs
  ### 2. High Level Architecture
-       * <ins> Wheel Speed Conversion </ins>
+       * Wheel Speed Conversion
        * Wheel Coordinates Computation
        * Wheel Steer Angle Computation
        * Valid Wheel Speed Selection by Gating
