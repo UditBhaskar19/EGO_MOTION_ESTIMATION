@@ -7,8 +7,8 @@ Here the ego-motion estimation is performed from the **wheel speeds** and **stee
 
 
 ## Contents
-### 1. Inputs Considered and Required Outputs
-![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/0_sensor_setup.PNG)
+### 1. Sensor Setup and Layout
+![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/0_sensor_setups.PNG)
 ### 2. Inputs Considered and Required Outputs
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/1_inputs_outputs.PNG)
 ### 3. High Level Architecture
