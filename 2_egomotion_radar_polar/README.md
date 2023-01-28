@@ -43,3 +43,6 @@ The below animation is a brief sequence of radar frames. It can be observed that
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/1_egomotion_wheel_speed/readme_artifacts/5_velocity_comparisons.PNG) 
 ### 5. Conclusion
 Overall the presented approach for ego-motion estimation looks promising and also computationally efficient.
+
+
+![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/plot4.PNG)
