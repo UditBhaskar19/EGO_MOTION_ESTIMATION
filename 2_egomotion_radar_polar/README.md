@@ -61,3 +61,6 @@ Overall the presented approach for ego-motion estimation looks promising and als
 
 
 $\sqrt{3x-1}+(1+x)^2$
+
+
+$\vr_pred = -( v_x * sin(theta_meas) + v_y * cos(theta_meas) )$
