@@ -21,7 +21,6 @@ The inputs are the radar measurements in polar coordinates. A detailed summary o
 ### 3. Radar Scan Visualization in Ego Vehicle frame
 The below animation is a brief sequence of radar frames. It can be observed that most of the range-rate is pointed radially towards the radar location. These arrows corrospond to the stationary measurements. These are infact used for estimating the radar ego-motion which is discussed in the remained of this document. The arrows NOT pointing radially corrospond to the moving or non-stationary measurements. These dynamic objects need to be removed for the ego-motion estimator to work correctly.
 
-
 [Animation for longer sequence of radar frames](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/radar_range_rate.gif)
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/radar_range_rate4.gif)
 
@@ -31,6 +30,8 @@ The below animation is a brief sequence of radar frames. It can be observed that
    - **Clutter Removal by RANSAC** : After an preliminary selection of the stationary measurements, Random Sampling and Consensus (RANSAC) is used to remove clutter measurements 
    - **Radar Ego-motion Computation** : Since radar gives only range-rate ( NO orthogonal velocity component ) a full 3DOF ego motion is not possible using a single radar. Here we estimate translational radar ego-motion (vx, vy) using the method of Ordinary Least Squares.
    - **Vehicle Ego-motion estimation** : Next the ego motion is computed w.r.t the wheel base center where it is assumed that the lateral velocity component is 0 ( vy = 0 )
+&nbsp;
+&nbsp;
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/1_architecture1.PNG)
 
 
