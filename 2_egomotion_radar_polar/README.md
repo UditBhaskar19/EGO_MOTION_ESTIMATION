@@ -61,4 +61,4 @@ Overall the presented approach for ego-motion estimation looks promising and als
 
 
 
-$\vr_{pred} = -( v_x * sin(theta_{meas}) + v_y * cos(theta_{meas}) )$
+$vr_{pred} = -( v_x * sin(theta_{meas}) + v_y * cos(theta_{meas}) )$
