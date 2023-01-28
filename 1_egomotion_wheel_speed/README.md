@@ -1,4 +1,4 @@
-# EGO_MOTION_ESTIMATION_FROM_WHEEL_SPEED_AND_STEERING_ANGLE
+# Ego-motion Estimation From Wheel Speeds & Steering Angle
 [detailed design document link](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/1_egomotion_wheel_speed/1_ego_motion_from_wheel_speed.pdf)
 
 
