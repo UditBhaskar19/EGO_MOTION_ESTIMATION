@@ -11,17 +11,27 @@ Here the ego-motion estimation is performed from the **wheel speeds** and **stee
  - **Summary:** Built and trained a deep neural network to classify traffic signs, using TensorFlow. Experimented with different network architectures. Performed image pre-processing and validation to guard against overfitting.
  - **Keywords:** Deep Learning, TensorFlow, Computer Vision
 
+
 ## CONTENTS
 
-<ins> Wheel Speed Conversion </ins>
-<u> Wheel Speed Conversion </u>
+####  1. Inputs Considered and Required Outputs
+####  2. High Level Architecture
+   - **Wheel Speed Conversion**
+   - **Wheel Coordinates Computation**
+   - **Wheel Steer Angle Computation**
+   - **Valid Wheel Speed Selection by Gating**
+   - **Vehicle Ego-motion estimation**
+####  3. Results & Plots
+####  4. Some Observations regarding Plots
 
- **1. Inputs Considered and Required Outputs**
- **2. High Level Architecture**
+## CONTENTS
+
+**1. Inputs Considered and Required Outputs**
+**2. High Level Architecture**
        * Wheel Speed Conversion
        * Wheel Coordinates Computation
        * Wheel Steer Angle Computation
        * Valid Wheel Speed Selection by Gating
        * Vehicle Ego-motion estimation
- **3. Results & Plots**
- **4. Some Observations regarding Plots**
+**3. Results & Plots**
+**4. Some Observations regarding Plots**
