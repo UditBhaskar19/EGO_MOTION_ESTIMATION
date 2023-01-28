@@ -4,6 +4,7 @@ Here the ego-motion estimation is performed from the **wheel speeds** and **stee
 ## CONTENTS
 
 <ins> Wheel Speed Conversion </ins>
+<u> Wheel Speed Conversion </u>
 
  - ### Inputs Considered and Required Outputs
  - ### High Level Architecture
