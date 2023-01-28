@@ -1,5 +1,5 @@
 # EGO_MOTION_ESTIMATION
-[detailed design document link]()
+[detailed design document link](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/1_egomotion_wheel_speed/1_ego_motion_from_wheel_speed.pdf)
 
 
 ## Introduction
