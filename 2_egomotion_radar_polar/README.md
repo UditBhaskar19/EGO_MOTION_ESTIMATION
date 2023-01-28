@@ -9,12 +9,12 @@ Here the ego-motion estimation is performed from **radar**. It is assumed that t
 ## Contents
 
 ### 1. Sensor Setup and Layout
-In this project [RadarScenes](https://radar-scenes.com/) dataset is used for validating and generating results. Here the measurements are not synchronized and the sensor layout doesnot have a full 360&deg; coverage. Nonetheless the dataset is considered here because it is one of the few datasets publickly available that has raw radar point cloud measurements.
+In this project [RadarScenes](https://radar-scenes.com/) dataset is used for validating and generating results. Here the measurements are not synchronized and the sensor layout doesnot have a full 360&deg; coverage. Nonetheless the dataset is considered here because it is one of the few datasets publickly available that has raw radar point cloud measurements.<br>
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/0_sensor_setups.PNG)
 
 
 ### 2. Inputs Considered and Required Outputs
-The inputs are the radar measurements in polar coordinates. A detailed summary of all the required inputs and the outputs is as follows.
+The inputs are the radar measurements in polar coordinates. A detailed summary of all the required inputs and the outputs is as follows.<br>
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/1_inputs_outputs.PNG)
 
 
