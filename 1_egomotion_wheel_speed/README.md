@@ -4,3 +4,6 @@ Here the ego-motion estimation is performed from the wheel speeds and steering a
 ## Contents
 
  - ### Inputs Considered and Required Outputs
+ - ### High Level Architecture
+ - ### Results & Plots
+ - ### Some Observations regarding Plots
