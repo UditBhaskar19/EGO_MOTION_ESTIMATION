@@ -1,8 +1,8 @@
-# EGO_MOTION_ESTIMATION
-[detailed design document link](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/1_egomotion_wheel_speed/1_ego_motion_from_wheel_speed.pdf)
+# Ego-motion Estimation from radar sensor - radar point cloud is in polar coordinate
+[detailed design document link](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/1_radar_ego_motion_polar.pdf)
 
 ## Introduction
-Here the ego-motion estimation is performed from the **wheel speeds** and **steering angle**. It is assumed that the **vehicle is car-like with 4 wheels is a 2-Wheeled Drive**.The results are validated using **NuScenes** mini dataset.
+Here the ego-motion estimation is performed from **radar** sensor. It is assumed that the **vehicle is car-like with 4 wheels is a 2-Wheeled Drive**.
 
 ## Contents
 ### 1. Sensor Setup and Layout
