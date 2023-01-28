@@ -57,3 +57,7 @@ Overall the presented approach for ego-motion estimation looks promising and als
 
 
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/plot4.PNG)
+
+
+
+$\sqrt{3x-1}+(1+x)^2$
