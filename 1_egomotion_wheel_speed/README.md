@@ -8,7 +8,7 @@ Here the ego-motion estimation is performed from the **wheel speeds** and **stee
 
 ## Contents
 ### 1. Inputs Considered and Required Outputs
-![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/1_egomotion_wheel_speed/readme_artifacts/12_inputs_outputs.PNG)
+![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/1_egomotion_wheel_speed/readme_artifacts/12_inputs_outputs1.PNG)
 ### 2. High Level Architecture
    - **Wheel Speed Conversion** : Convert wheel speed input signals from rpm to m/s
    - **Wheel Coordinates Computation** : Compute wheel locations w.r.t the vehicle wheel base center. Ideally these should be determined from some calibration procedure
