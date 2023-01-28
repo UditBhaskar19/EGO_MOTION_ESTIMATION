@@ -1,5 +1,5 @@
 # EGO_MOTION_ESTIMATION
-This repository contains **design** and **implementation** of ego-motion estimation techniques for different sensor types and various sensor combinations. These techniques and the concepts used in these techniques can be applied in various domains like **robotic perception**, **autonomous driving** and **advance driver assistance system applications**. These are ongoing projects, and several other ego-motion estimation techniques might be added and the existing ones might be enhanced in the future. Hope that the community finds these useful :)
+This repository contains **design** and **implementation** of ego-motion estimation techniques for different sensor types and various sensor combinations. These techniques and the concepts used in these techniques can be applied in various domains like **robotic perception**, **autonomous driving** and **advance driver assistance system applications**. These are ongoing projects, and several other ego-motion estimation techniques might be added and the existing ones might be enhanced in the future. Hope that the community finds these projects useful :)
 
 ## Projects
 
