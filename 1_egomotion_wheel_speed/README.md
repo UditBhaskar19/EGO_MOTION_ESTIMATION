@@ -1,5 +1,6 @@
 # EGO_MOTION_ESTIMATION
 
+
 ## Introduction
 Here the ego-motion estimation is performed from the **wheel speeds** and **steering angle**. It is assumed that the **vehicle is car-like with 4 wheels is a 2-Wheeled Drive**.The results are validated using **NuScenes** mini dataset.
 
@@ -17,4 +18,4 @@ Here the ego-motion estimation is performed from the **wheel speeds** and **stee
    - **Ego motion estimation output Plot** : The estimated yaw-rate seems to be more noisy than the estimated velocities. Optionally the estimations can be made smoother by Kalman Filtering. 
    - **Comparing estimated velocities and the input wheel speeds** : The variation of the estimated vx w.r.t time is as expected. Since the ego-motion is estimated w.r.t the wheel base center, at each time the value would be somewhere in the middle all the wheel speed values. Additionally it can be concluded that the estmated output appears to be less noisy than the input wheel speed signals. 
 ### 4. Conclusion
-Overall the presented approach for ego-motion estimation looks promising and also computationally efficient.  
+Overall the presented approach for ego-motion estimation looks promising and also computationally efficient.
