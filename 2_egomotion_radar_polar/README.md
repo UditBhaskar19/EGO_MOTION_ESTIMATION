@@ -32,7 +32,7 @@ Vehicle ego motion estimation
    - **Clutter Removal by RANSAC** : After an preliminary selection of the stationary measurements, Random Sampling and Consensus (RANSAC) is used to remove clutter measurements 
    - **Radar Ego-motion Computation** : Since radar gives only range-rate ( NO orthogonal velocity component ) a full 3DOF ego motion is not possible using a single radar. Here we estimate translational radar ego-motion (vx, vy) using the method of Ordinary Least Squares.
    - **Vehicle Ego-motion estimation** : Next the ego motion is computed w.r.t the wheel base center under certain constraints where it is assumed that the lateral velocity component is 0 ( vy = 0 )
-![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/2_architecture1.PNG)
+![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/1_architecture1.PNG)
 
 ### 4. Results , Plots and Some Observations regarding Plots ( NuScenes mini - scene 0916 )
    - **Input Signal Plot** : It can be observed that the wheel speed signals are significantly more noisy than the steering signal. Hence in this project, the wheel speeds are treated as stochastic inputs which are assumed to be uncorrelated and normally distributed. The steering angle which is almost noiseless is treated as a control parameter. Under these considerations the problem of ego-motion estimation reduces to the linear least squares problem.
