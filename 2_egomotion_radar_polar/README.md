@@ -17,7 +17,7 @@ The inputs are the radar measurements in polar coordinates. A detailed summary o
 The below animation is a brief sequence of radar frames. It can be observed that most of the range-rate is pointed radially towards the radar location. These arrows corrospond to the stationary measurements. These are infact used for estimating the radar ego-motion which is discussed in the remained of this document. The arrows NOT pointing radially corrospond to the moving or non-stationary measurements. These dynamic objects need to be removed for the ego-motion estimator to work correctly.
 
 [Animation for longer sequence of radar frames](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/radar_range_rate.gif)
-![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/radar_range_rate2.gif)
+![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/radar_range_rate4.gif)
 
 
 Stationary Measurement Identification
