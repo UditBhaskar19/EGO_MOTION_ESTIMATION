@@ -1,9 +1,9 @@
-# EGO_MOTION_ESTIMATION
+# EGO_MOTION_ESTIMATION_FROM_WHEEL_SPEED_AND_STEERING_ANGLE
 [detailed design document link](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/1_egomotion_wheel_speed/1_ego_motion_from_wheel_speed.pdf)
 
 
 ## Introduction
-Here the ego-motion estimation is performed from the **wheel speeds** and **steering angle**. It is assumed that the **vehicle is car-like with 4 wheels is a 2-Wheeled Drive**.The results are validated using **NuScenes** mini dataset.
+Here the ego-motion estimation is performed from the **wheel speeds** and **steering angle**. It is assumed that the **vehicle is car-like with 4 wheels is a 2-Wheeled Drive**.The results are validated using **[NuScenes](https://www.nuscenes.org/)** mini dataset.
 
 
 ## Contents
@@ -21,7 +21,7 @@ Here the ego-motion estimation is performed from the **wheel speeds** and **stee
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/1_egomotion_wheel_speed/readme_artifacts/3_input_signals.PNG)
    - **Ego motion estimation output Plot** : The estimated yaw-rate seems to be more noisy than the estimated velocities. Optionally the estimations can be made smoother by Kalman Filtering.
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/1_egomotion_wheel_speed/readme_artifacts/4_estimated_outputs.PNG)
-   - **Comparing estimated velocities and the input wheel speeds** : The variation of the estimated vx w.r.t time is as expected. Since the ego-motion is estimated w.r.t the wheel base center, at each time the value would be somewhere in the middle all the wheel speed values. Additionally it can be concluded that the estmated output appears to be less noisy than the input wheel speed signals.
+   - **Comparing estimated velocities and the input wheel speeds** : The variation of the estimated vx w.r.t time is as expected. Since the ego-motion is estimated w.r.t the wheel base center, at each time the value would be somewhere in the middle of all the wheel speed values. Additionally it can be concluded that the estmated output appears to be less noisy than the input wheel speed signals.
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/1_egomotion_wheel_speed/readme_artifacts/5_velocity_comparison.PNG)
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/1_egomotion_wheel_speed/readme_artifacts/6_velocity_comparison.PNG) 
 ### 4. Conclusion
