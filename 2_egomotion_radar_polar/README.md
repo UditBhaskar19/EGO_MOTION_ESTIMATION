@@ -29,8 +29,7 @@ The below animation is a brief sequence of radar frames. It can be observed that
    - **Stationary Measurement Identification** : The stationary measurements are identified. First the predicted range-rate for stationarity case at each measurement (x,y) location is computed. If the measurement range-rate and the predicted range-rate is 'close' within a certain margin, then that measurement is considered for further processing. It may happen that the wheel based ego-motion is corrupted since the wheel is prone to slipping and skidding, in such a case the estimated ego-motion in the previous time t-1 is utilized for computing the predicted range-rate.
    - **Clutter Removal by RANSAC** : After an preliminary selection of the stationary measurements, Random Sampling and Consensus (RANSAC) is used to remove clutter measurements 
    - **Radar Ego-motion Computation** : Since radar gives only range-rate ( NO orthogonal velocity component ) a full 3DOF ego motion is not possible using a single radar. Here we estimate translational radar ego-motion (vx, vy) using the method of Ordinary Least Squares.
-   - **Vehicle Ego-motion estimation** : Next the ego motion is computed w.r.t the wheel base center where it is assumed that the lateral velocity component is 0 ( vy = 0 )
-\n
+   - **Vehicle Ego-motion estimation** : Next the ego motion is computed w.r.t the wheel base center where it is assumed that the lateral velocity component is 0 ( vy = 0 )<br>
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/1_architecture1.PNG)
 
 
