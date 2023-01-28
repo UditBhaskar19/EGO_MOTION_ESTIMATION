@@ -40,9 +40,15 @@ In this section some analysis is done to highlight the importance of two modules
    - First, two estimation results are compared, one with and the other without the above two mentioned modules. The plot shows that the system would result in a total failure without these two modules.<br><br>
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/plot4.PNG)
 
-   - Next we compare the measurement range-rates with the predicted range-rates computed from the estimated radar ego-motion (vx, vy). Here the ego-motion is computed by considering all the measurements.<br>
+   - We then compare the measurement range-rates with the predicted range-rates computed from the estimated radar ego-motion (vx, vy). Here the ego-motion is computed by considering all the measurements.<br>
 Basically we are computing $vr_{pred} = -( v_x * sin(theta_{meas}) + v_y * cos(theta_{meas}) )$ and plotting $vr_{meas}$ & $vr_{pred}$. <br><br>
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/plot_misfit.PNG)
+
+   - Next it is shown how odometry information or some other prior ego-motion estimation can be used to select only those measurements that are most likely stationary. Since RANSAC works better if a significan portion of the data are inliers, this measurement gating step is crucial. <br><br>
+![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/plot_odom_prior.PNG)
+
+   - Finally we plot the measurements selected by RANSAC, and as seen below, the predicted range-rate line passes through the stationary measurements.
+![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/plot_ransac.PNG)
 
 
 ### 4. Results , Plots and Some Observations regarding Plots ( NuScenes mini - scene 0916 )
