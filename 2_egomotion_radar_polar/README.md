@@ -35,6 +35,12 @@ The below animation is a brief sequence of radar frames. It can be observed that
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/1_architecture1.PNG)
 
 
+### 5. Analysis
+In this section some analysis is done to highlight the importance of two modules in the architecture: **Stationary Measurement Identification** & **Clutter Removal by RANSAC**
+   - First two estimation results are compared, one with and the other without the above two mentioned modules. The plot shows that the system would result in a total failure without these two modules.
+![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/plot4.PNG)
+
+
 ### 4. Results , Plots and Some Observations regarding Plots ( NuScenes mini - scene 0916 )
    - **Input Signal Plot** : It can be observed that the wheel speed signals are significantly more noisy than the steering signal. Hence in this project, the wheel speeds are treated as stochastic inputs which are assumed to be uncorrelated and normally distributed. The steering angle which is almost noiseless is treated as a control parameter. Under these considerations the problem of ego-motion estimation reduces to the linear least squares problem.
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/1_egomotion_wheel_speed/readme_artifacts/3_input_signals.PNG)
