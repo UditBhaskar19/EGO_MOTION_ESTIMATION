@@ -1,12 +1,6 @@
 # EGO_MOTION_ESTIMATION
-This repository contains **design** and **implementation** of ego-motion estimation techniques for different sensor types and various sensor combinations. These techniques and the concepts used in these techniques can be applied in various domains like **robotic perception**, **autonomous driving** and **advance driver assistance system applications**. These are ongoing projects, and several other ego-motion estimation techniques might be added and the existing ones might be enhanced in the future. Hope that the community finds these projects useful :)
+Here the ego-motion estimation is performed from the wheel speeds and steering angle. It is assumed that the vehicle is car-like with 4 wheels is a 2-Wheeled Drive.The results are validated using NuScenes mini dataset.
 
-## Projects
+## Contents
 
-### P1 - Ego-motion estimation from wheel speeds and steering angle
-![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/readme_artifacts/P1_cover_img.PNG)
-
-### P2 - Ego-motion estimation from radar sensors ( raw radar measurements )
-![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/readme_artifacts/P2_cover_img.PNG)
-
-### P3 - Ego-motion estimation from radar sensors ( filtered radar measurements )
+ - #### Inputs Considered and Required Outputs
