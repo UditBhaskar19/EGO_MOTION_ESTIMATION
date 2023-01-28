@@ -7,6 +7,6 @@ This repository contains **design** and **implementation** of ego-motion estimat
 [![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/readme_artifacts/P1_cover_img.PNG)](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/tree/main/1_egomotion_wheel_speed)
 
 ### [P2 - Ego-motion estimation from radar sensors ( raw radar point cloud )](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/tree/main/2_egomotion_radar_polar)
-![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/readme_artifacts/P2_cover_img.PNG)
+[![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/readme_artifacts/P2_cover_img.PNG)](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/tree/main/2_egomotion_radar_polar)
 
-### [P3 - Ego-motion estimation from radar sensors ( filtered radar point cloud )](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/tree/main/1_egomotion_wheel_speed)
+### [P3 - Ego-motion estimation from radar sensors ( filtered radar point cloud )](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/tree/main/3_egomotion_radar_cartesian)
