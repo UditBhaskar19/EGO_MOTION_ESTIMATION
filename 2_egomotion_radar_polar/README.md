@@ -1,13 +1,8 @@
 # EGO_MOTION_ESTIMATION
 [detailed design document link](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/1_egomotion_wheel_speed/1_ego_motion_from_wheel_speed.pdf)
 
-
 ## Introduction
 Here the ego-motion estimation is performed from the **wheel speeds** and **steering angle**. It is assumed that the **vehicle is car-like with 4 wheels is a 2-Wheeled Drive**.The results are validated using **NuScenes** mini dataset.
-
-
-
-
 
 ## Contents
 ### 1. Sensor Setup and Layout
@@ -15,8 +10,14 @@ In this project [RadarScenes](https://radar-scenes.com/) dataset is used for val
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/0_sensor_setups.PNG)
 
 ### 2. Inputs Considered and Required Outputs
+The inputs are the radar measurements in polar coordinates. A detailed summary of all the required inputs and the outputs is as follows.
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/1_inputs_outputs.PNG)
-### 3. High Level Architecture
+
+### 3. Radar Scan Visualization in Ego Vehicle frame
+The below animation is a brief sequence of radar frames. It can be observed that most of the range-rate is pointed radially towards the radar location. These arrows corrospond to the stationary measurements. These are infact used for estimating the radar ego-motion which is discussed in the remained of this document. The arrows NOT pointing radially corrospond to the moving or non-stationary measurements. These dynamic objects need to be removed for the ego-motion estimator to work correctly.
+![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/radar_range_rate2.gif)
+
+### 4. High Level Architecture
    - **Wheel Speed Conversion** : Convert wheel speed input signals from rpm to m/s
    - **Wheel Coordinates Computation** : Compute wheel locations w.r.t the vehicle wheel base center. Ideally these should be determined from some calibration procedure
    - **Wheel Steer Angle Computation** : Compute Front Left and Front Right wheel steer angles from raw inpute steering signal
@@ -32,7 +33,3 @@ In this project [RadarScenes](https://radar-scenes.com/) dataset is used for val
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/1_egomotion_wheel_speed/readme_artifacts/5_velocity_comparisons.PNG) 
 ### 5. Conclusion
 Overall the presented approach for ego-motion estimation looks promising and also computationally efficient.
-
-
-
-![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/radar_range_rate2.gif)![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/radar_range_rate2.gif)
