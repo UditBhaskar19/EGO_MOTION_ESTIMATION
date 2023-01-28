@@ -41,7 +41,7 @@ In this section some analysis is done to highlight the importance of two modules
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/plot4.PNG)
 
    - Next we compare the measurement range-rates with the predicted range-rates computed from the estimated radar ego-motion (vx, vy). Here the ego-motion is computed by considering all the measurements. 
-Basically we are computing $\vr_pred = -( v_x*cos(theta_meas) + v_y*sin(theta_meas) )$ and plotting $\vr_meas$ & $\vr_pred$.
+Basically we are computing $vr_{pred} = -( v_x * sin(theta_{meas}) + v_y * cos(theta_{meas}) )$ and plotting $vr_{meas}$ & $vr_{pred}$.
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/plot_misfit.PNG)
 
 
@@ -59,6 +59,3 @@ Overall the presented approach for ego-motion estimation looks promising and als
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/plot4.PNG)
 
 
-
-
-$vr_{pred} = -( v_x * sin(theta_{meas}) + v_y * cos(theta_{meas}) )$
