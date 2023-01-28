@@ -1,4 +1,4 @@
-# Ego-motion Estimation from radar sensor - radar point cloud is in polar coordinate
+# Ego-motion Estimation from radar sensor - measurements in polar coordinate
 [detailed design document link](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/1_radar_ego_motion_polar.pdf)
 
 
