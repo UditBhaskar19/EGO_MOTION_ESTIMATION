@@ -40,6 +40,8 @@ In this section some analysis is done to highlight the importance of two modules
    - First, two estimation results are compared, one with and the other without the above two mentioned modules. The plot shows that the system would result in a total failure without these two modules.<br><br>
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/plot4.PNG)
 
+   - Next we compare the measurement range-rates with the predicted range-rates computed from the estimated radar ego-motion (vx, vy). Here the ego-motion is computed by considering all the measurements. So basically we are computing vr_pred = -( vx*cos(theta_meas) + vy*sin(theta_meas) ) and plotting vr_meas & vr_pred.  
+
 
 ### 4. Results , Plots and Some Observations regarding Plots ( NuScenes mini - scene 0916 )
    - **Input Signal Plot** : It can be observed that the wheel speed signals are significantly more noisy than the steering signal. Hence in this project, the wheel speeds are treated as stochastic inputs which are assumed to be uncorrelated and normally distributed. The steering angle which is almost noiseless is treated as a control parameter. Under these considerations the problem of ego-motion estimation reduces to the linear least squares problem.
