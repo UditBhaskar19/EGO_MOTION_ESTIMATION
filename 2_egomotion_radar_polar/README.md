@@ -1,9 +1,9 @@
-# Ego-motion Estimation from radar sensor - radar point cloud is in polar coordinate
+# Ego-motion Estimation by Radar Sensor - RadarScenes dataset
 [detailed design document link](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/1_radar_ego_motion_polar.pdf)
 
 
 ## Introduction
-Here the ego-motion estimation is performed from **radar**. It is assumed that the **vehicle is car-like and 2WD**.
+Here the ego-motion estimation is performed from **radar**. It is assumed that the **vehicle is car-like and 2WD**. Ego-motion estimation by radars has several advantages since radars are robust against adverse weather conditions. In the event of primary sensor failure, radars can also be used to autonomusly navigate the vehicle to a safe spot. This project describes one approach for ego-motion estimation by radars. The references used in this project are listed in the document.
 
 
 ## Contents
@@ -15,7 +15,7 @@ In this project [RadarScenes](https://radar-scenes.com/) dataset is used for val
 
 
 ### 2. Inputs Considered and Required Outputs
-The inputs are the radar measurements in polar coordinates. A detailed summary of all the required inputs and the outputs is as follows.
+The inputs are the radar measurements in polar coordinates. A detailed summary of all the required inputs and the outputs are as follows.
 <br>
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/1_inputs_outputs.PNG)
 
@@ -28,8 +28,8 @@ The below animation is a brief sequence of radar frames. It can be observed that
 
 
 ### 4. High Level Architecture
-   - **Stationary Measurement Identification** : The stationary measurements are identified. First the predicted range-rate for stationarity case at each measurement (x,y) location is computed. If the measurement range-rate and the predicted range-rate is 'close' within a certain margin, then that measurement is considered for further processing. It may happen that the wheel based ego-motion is corrupted since the wheel is prone to slipping and skidding, in such a case the estimated ego-motion in the previous time t-1 is utilized for computing the predicted range-rate.<br>
-   - **Clutter Removal by RANSAC** : After an preliminary selection of the stationary measurements, Random Sampling and Consensus (RANSAC) is used to remove clutter measurements.<br>
+   - **Stationary Measurement Identification** : The stationary measurements are identified. First the predicted range-rate for stationarity case at each measurement (x,y) location is computed. If the measurement range-rate and the predicted range-rate is 'close' within a certain margin, then that measurement is considered for further processing. It may happen that the wheel speed based ego-motion is corrupted since the wheel is prone to slipping and skidding, in such a case the estimated ego-motion in the previous time t-1 is utilized for computing the predicted range-rate.<br>
+   - **Clutter Removal by RANSAC** : After an preliminary selection of the stationary measurements, Random Sample Consensus (RANSAC) is used to remove clutter measurements.<br>
    - **Radar Ego-motion Computation** : Since radar gives only range-rate ( NO orthogonal velocity component ) a full 3DOF ego motion is not possible using a single radar. Here we estimate translational radar ego-motion (vx, vy) using the method of Ordinary Least Squares.<br>
    - **Vehicle Ego-motion estimation** : Next the ego motion is computed w.r.t the wheel base center where it is assumed that the lateral velocity component is 0 ( vy = 0 )<br><br>
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/1_architecture1.PNG)
@@ -41,27 +41,28 @@ In this section some analysis is done to highlight the importance of two modules
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/plot4.PNG)
 
    - We then compare the measurement range-rates with the predicted range-rates computed from the estimated radar ego-motion (vx, vy). Here the ego-motion is computed by considering all the measurements.<br>
-Basically we are computing **$vr_{pred} = -( v_x * sin(theta_{meas}) + v_y * cos(theta_{meas}) )$** and plotting **$vr_{meas}$** & **$vr_{pred}$**. <br><br>
+Basically we are computing **$vr_{pred} = -( v_x * cos(theta_{meas}) + v_y * sin(theta_{meas}) )$** and plotting **$vr_{meas}$** & **$vr_{pred}$**. <br><br>
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/plot_misfit.PNG)
 
-   - Next it is shown how odometry information or some other prior ego-motion estimates can be used to select only those measurements that are most likely stationary. Since RANSAC works better if a significan portion of the data are inliers, this measurement gating step is crucial. <br><br>
+   - Next it is shown how odometry information or some other prior ego-motion estimates can be used to select only those measurements that are most likely stationary. Since RANSAC works better if a significant portion of the data are inliers, this measurement gating step is crucial. <br><br>
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/plot_odom_prior.PNG)
 
    - Finally we plot the measurements selected by RANSAC, and as seen below, the predicted range-rate line passes through the stationary measurements.
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/plot_ransac.PNG)
 
 
-### 4. Results , Plots and Some Observations regarding Plots ( NuScenes mini - scene 0916 )
-   - **Input Signal Plot** : It can be observed that the wheel speed signals are significantly more noisy than the steering signal. Hence in this project, the wheel speeds are treated as stochastic inputs which are assumed to be uncorrelated and normally distributed. The steering angle which is almost noiseless is treated as a control parameter. Under these considerations the problem of ego-motion estimation reduces to the linear least squares problem.
-![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/1_egomotion_wheel_speed/readme_artifacts/3_input_signals.PNG)
-   - **Ego motion estimation output Plot** : The estimated yaw-rate seems to be more noisy than the estimated velocities. Optionally the estimations can be made smoother by Kalman Filtering.
-![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/1_egomotion_wheel_speed/readme_artifacts/4_estimated_outputs.PNG)
-   - **Comparing estimated velocities and the input wheel speeds** : The variation of the estimated vx w.r.t time is as expected. Since the ego-motion is estimated w.r.t the wheel base center, at each time the value would be somewhere in the middle all the wheel speed values. Additionally it can be concluded that the estmated output appears to be less noisy than the input wheel speed signals.
-![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/1_egomotion_wheel_speed/readme_artifacts/5_velocity_comparisons.PNG) 
-### 5. Conclusion
-Overall the presented approach for ego-motion estimation looks promising and also computationally efficient.
+### 6. Results , Plots and Some Observations regarding Plots ( RadarScenes - scene 105 )
+   - **Ego motion estimation output Plot** : The estimated yaw-rate seems to be more noisy than the estimated vx
+![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/plot_result3.PNG)
+<br><br><br><br><br>
+![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/plot_result4.PNG)
 
+   - **Comparing OLS and KF estimates** :
+![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/plot_result1.PNG)
+<br><br><br><br><br>
+![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/plot_result2.PNG)
 
-![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/plot4.PNG)
+### 7. Conclusion
+Overall the presented approach for ego-motion estimation looks promising. Further details can be found in the [document](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/1_radar_ego_motion_polar.pdf)
 
 
