@@ -7,12 +7,14 @@ Here we use the filtered measurements that are in cartesian (px, py, vx, vy). It
 
 ## Table of Contents
 <a name="t0"></a>
+
    - [Sensor Setup and Layout](#t1)
    - [Inputs Considered and Required Outputs](#t2)
    - [Radar Scan Visualization in Ego Vehicle frame](#t3)
    - [High Level Architecture](#t4)
    - [Results & Plots](#t5)
    - [Conclusion](#t6)
+   
 <br><br><br>
 
 
@@ -22,6 +24,7 @@ In this project [nuScenes](https://www.nuscenes.org/) dataset is used for valida
 <br>
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/3_egomotion_radar_cartesian/readme_artifacts/1_sensor_setup.PNG)
 <br>
+
 [Back to TOC](#t0)
 <br><br>
 
@@ -30,6 +33,7 @@ In this project [nuScenes](https://www.nuscenes.org/) dataset is used for valida
 <a name="t2"></a>
 A detailed summary of all the required inputs and the outputs are as follows.![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/3_egomotion_radar_cartesian/readme_artifacts/2_inputs_outputs.PNG)
 <br>
+
 [Back to TOC](#t0)
 <br><br>
 
@@ -39,6 +43,7 @@ A detailed summary of all the required inputs and the outputs are as follows.![]
 The below animation is a brief sequence of radar frames where the velocity has both the components. Since the velocity vector has both components ( unlike range-rate ), from the animation we can guess when the vehicle is turning, wobbling and moving approximately in a straight line.
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/3_egomotion_radar_cartesian/readme_artifacts/radar_range_rate1.gif)
 <br>
+
 [Back to TOC](#t0)
 
 
@@ -50,6 +55,7 @@ Since the measurements are filtered and each measurement has information regardi
    - **Vehicle Ego-motion estimation** : Next the ego motion is computed w.r.t the wheel base center where it is assumed that the lateral velocity component is 0 ( vy = 0 )<br><br>
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/3_egomotion_radar_cartesian/readme_artifacts/4_architecture.PNG)
 <br>
+
 [Back to TOC](#t0)
 <br><br>
 
@@ -58,13 +64,15 @@ Since the measurements are filtered and each measurement has information regardi
    - **estimation output plot for scene - 0061** : <br>
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/3_egomotion_radar_cartesian/readme_artifacts/5_1_0061_all_plots.PNG)
 <br>
+
 [Back to TOC](#t0)
 
 
 ### 7. Conclusion
 <a name="t6"></a>
 Overall the presented approach for ego-motion estimation looks promising. Further details can be found in the [document](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/3_egomotion_radar_cartesian/1_radar_ego_motion_cartesian.pdf)
-<br>
+<br><br><br>
+
 [Back to TOC](#t0)
 
 
