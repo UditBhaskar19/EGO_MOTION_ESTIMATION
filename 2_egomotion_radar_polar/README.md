@@ -6,8 +6,7 @@
 Here the ego-motion estimation is performed by **radar**. It is assumed that the **vehicle is car-like and 2WD**. Radar has several advantages since it is robust against adverse weather conditions. In the event of primary sensor failure, radars can also be used to autonomusly navigate the vehicle to a safe spot. This project describes one approach for ego-motion estimation by radars. The references used in this project are listed in the document.
 
 
-## Table of Contents
-<a name="t0"></a>
+## Table of Contents <a name="t0"></a>
 
    - [Sensor Setup and Layout](#t1)
    - [Inputs Considered and Required Outputs](#t2)
