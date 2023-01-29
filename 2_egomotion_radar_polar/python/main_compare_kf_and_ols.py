@@ -1,3 +1,8 @@
+# =====================================================================================================================
+# Author Name : Udit Bhaskar
+# description : main script
+# =====================================================================================================================
+
 from matplotlib import pyplot as plt
 from main_single_radar_kf import ego_motion_single_radar_kf
 from main_single_radar_ols import ego_motion_single_radar_ols

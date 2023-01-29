@@ -18,7 +18,7 @@ A detailed summary of all the required inputs and the outputs are as follows.![]
 
 
 ### 3. Radar Scan Visualization in Ego Vehicle frame
-The below animation is a brief sequence of radar frames where the velocity both the components. Since the velocity vectors has both components ( unlike range-rate ), from the animation we can guess when the vehicle is turning, wobbling and moving approximately in a straight line.
+The below animation is a brief sequence of radar frames where the velocity has both the components. Since the velocity vector has both components ( unlike range-rate ), from the animation we can guess when the vehicle is turning, wobbling and moving approximately in a straight line.
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/3_egomotion_radar_cartesian/readme_artifacts/radar_range_rate1.gif)
 
 
