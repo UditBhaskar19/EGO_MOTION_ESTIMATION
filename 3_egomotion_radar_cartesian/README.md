@@ -15,7 +15,7 @@ Here we use the filtered measurements that are in cartesian (px, py, vx, vy). It
    - [Results & Plots](#t5)
    - [Conclusion](#t6)
 
-<br><br>
+<br>
 
 
 ### 1. Sensor Setup and Layout
