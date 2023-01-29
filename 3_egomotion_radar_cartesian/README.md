@@ -1,15 +1,14 @@
 # Ego-motion Estimation by Radar Sensor - RadarScenes dataset
-[detailed design document link](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/1_radar_ego_motion_polar.pdf)
+[detailed design document link](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/3_egomotion_radar_cartesian/1_radar_ego_motion_cartesian.pdf)
 
 
 ## Introduction
-Here the ego-motion estimation is performed by **radar**. It is assumed that the **vehicle is car-like and 2WD**. Radar has several advantages since it is robust against adverse weather conditions. In the event of primary sensor failure, radars can also be used to autonomusly navigate the vehicle to a safe spot. This project describes one approach for ego-motion estimation by radars. The references used in this project are listed in the document.
-
+Here we use the filtered measurements that are in cartesian (px, py, vx, vy). It is assumed that the **vehicle is car-like and 2WD**.
 
 ## Contents
 
 ### 1. Sensor Setup and Layout
-In this project [RadarScenes](https://radar-scenes.com/) dataset is used for validating and generating results. The measurements are not synchronized and the sensor layout doesnot have a full 360&deg; coverage. Nonetheless the dataset is considered here because it is one of the few datasets publickly available that has raw radar point cloud measurements.
+In this project [nuScenes](https://www.nuscenes.org/) dataset is used for validating and generating results. The measurements are not synchronized and the sensor layout has a full 360&deg; coverage. The dataset is considered here because it is from a comercially available radar which gives measurements in cartesian coordinates.
 <br>
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/0_sensor_setups.PNG)
 
