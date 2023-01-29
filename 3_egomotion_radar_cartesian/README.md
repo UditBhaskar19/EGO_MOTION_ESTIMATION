@@ -11,6 +11,7 @@ Here we use the filtered measurements that are in cartesian (px, py, vx, vy). It
 In this project [nuScenes](https://www.nuscenes.org/) dataset is used for validating and generating results. The sensors are not synchronized and the sensor layout has a full 360&deg; coverage. The dataset is considered here because it is from a comercially available radar which gives measurements in cartesian coordinates.
 <br>
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/3_egomotion_radar_cartesian/readme_artifacts/1_sensor_setup.PNG)
+<br><br>
 
 
 ### 2. Inputs Considered and Required Outputs
