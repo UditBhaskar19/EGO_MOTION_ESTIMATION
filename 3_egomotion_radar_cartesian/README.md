@@ -6,6 +6,7 @@
 Here we use the filtered measurements that are in cartesian (px, py, vx, vy). It is assumed that the **vehicle is car-like and 2WD**.
 
 ## Table of Contents
+<a name="t0"></a>
    - [Sensor Setup and Layout](#t1)
    - [Inputs Considered and Required Outputs](#t2)
    - [Radar Scan Visualization in Ego Vehicle frame](#t3)
@@ -13,13 +14,15 @@ Here we use the filtered measurements that are in cartesian (px, py, vx, vy). It
    - [Results & Plots](#t5)
    - [Conclusion](#t6)
 
-## Contents
+
 
 ### 1. Sensor Setup and Layout
 <a name="t1"></a>
 In this project [nuScenes](https://www.nuscenes.org/) dataset is used for validating and generating results. The sensors are not synchronized and the sensor layout has a full 360&deg; coverage. The dataset is considered here because it is from a comercially available radar which gives measurements in cartesian coordinates.
 <br>
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/3_egomotion_radar_cartesian/readme_artifacts/1_sensor_setup.PNG)
+<br>
+[Back to TOC](#t0)
 <br><br>
 
 
