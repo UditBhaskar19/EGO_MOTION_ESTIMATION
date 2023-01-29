@@ -18,10 +18,8 @@ A detailed summary of all the required inputs and the outputs are as follows.![]
 
 
 ### 3. Radar Scan Visualization in Ego Vehicle frame
-The below animation is a brief sequence of radar frames. It can be observed that most of the range-rate is pointed radially towards the radar location. These arrows corrospond to the stationary measurements. These are infact used for estimating the radar ego-motion which is discussed in the remainder of this document. The arrows that points away from the sensor location or has length that appears to be of drastically different size corrosponds to measurements from dynamic objects. These dynamic measurements need to be removed for the ego-motion estimator to work correctly.
-
-[Animation for longer sequence of radar frames](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/radar_range_rate.gif)
-![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/radar_range_rate4.gif)
+The below animation is a brief sequence of radar frames where the velocity both the components. Since the velocity vectors has both components ( unlike range-rate ), from the animation we can guess when the vehicle is turning, wobbling and moving approximately in a straight line.
+![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/3_egomotion_radar_cartesian/readme_artifacts/radar_range_rate.gif)
 
 
 ### 4. High Level Architecture
