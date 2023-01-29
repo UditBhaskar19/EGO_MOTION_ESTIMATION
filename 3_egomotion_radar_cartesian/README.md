@@ -16,6 +16,7 @@ In this project [nuScenes](https://www.nuscenes.org/) dataset is used for valida
 
 ### 2. Inputs Considered and Required Outputs
 A detailed summary of all the required inputs and the outputs are as follows.![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/3_egomotion_radar_cartesian/readme_artifacts/2_inputs_outputs.PNG)
+<br><br>
 
 
 ### 3. Radar Scan Visualization in Ego Vehicle frame
