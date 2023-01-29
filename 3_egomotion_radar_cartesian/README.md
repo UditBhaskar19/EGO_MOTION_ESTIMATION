@@ -30,7 +30,7 @@ Since the measurements are filtered and each measurement has information regardi
    - **Stationary Measurement Identification** : The measurements are compared with the predicted measurements computed from previous state estimate of the ego-motion. Only the gated measurements are considered for further processing.<br> 
    - **Vehicle Ego-motion estimation** : Next the ego motion is computed w.r.t the wheel base center where it is assumed that the lateral velocity component is 0 ( vy = 0 )<br><br>
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/3_egomotion_radar_cartesian/readme_artifacts/4_architecture.PNG)
-
+<br><br>
 
 ### 6. Results & Plots
    - **estimation output plot for scene - 0061** : <br>
