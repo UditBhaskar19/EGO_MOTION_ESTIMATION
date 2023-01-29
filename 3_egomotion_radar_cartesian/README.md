@@ -27,14 +27,14 @@ The below animation is a brief sequence of radar frames. It can be observed that
 
 
 ### 4. High Level Architecture
-Since the measurements are filtered and each measurement has information regarding its dynamic status, the architecture is relatively simplier than the architecture for ego-motion estimation from raw radar point cloud project. The main components are as follows:
+Since the measurements are filtered and each measurement has information regarding its dynamic status, the architecture is relatively simplier than the architecture for [ego-motion estimation from raw radar point cloud project](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/tree/main/2_egomotion_radar_polar). The main components are as follows:
    - **Coordinate Transformation of measurements from sensor frame to vehicle frame** : <br> The measurements are first transformed from sensor frame to vehicle frame
    - **Stationary Measurement Identification** : <br> The measurements are further gated with the predicted estimate of the ego-motion. Only the measurements which are gated are considered for further processing
    - **Vehicle Ego-motion estimation** : Next the ego motion is computed w.r.t the wheel base center where it is assumed that the lateral velocity component is 0 ( vy = 0 )<br><br>
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/3_egomotion_radar_cartesian/readme_artifacts/4_architecture.PNG)
 
 
-### 6. Results & Plots ( RadarScenes - scene 105 )
+### 6. Results & Plots
    - **estimation output plot for scene - 0061** : <br>
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/3_egomotion_radar_cartesian/readme_artifacts/5_1_0061_all_plots.PNG)
 
