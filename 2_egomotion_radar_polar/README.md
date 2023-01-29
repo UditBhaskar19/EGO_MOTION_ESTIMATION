@@ -53,14 +53,12 @@ Basically we are computing **$vr_{pred} = -( v_x * cos(theta_{meas}) + v_y * sin
 
 ### 6. Results , Plots and Some Observations regarding Plots ( RadarScenes - scene 105 )
    - **Ego motion estimation output Plot** : The estimated yaw-rate seems to be more noisy than the estimated vx
-![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/plot_result3.PNG)
+![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/2_plots_results.PNG)
 <br><br><br><br><br>
-![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/plot_result4.PNG)
 
    - **Comparing OLS and KF estimates** :
-![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/plot_result1.PNG)
-<br><br><br><br><br>
-![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/plot_result2.PNG)
+![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/1_plots_results.PNG)
+
 
 ### 7. Conclusion
 Overall the presented approach for ego-motion estimation looks promising. Further details can be found in the [document](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/1_radar_ego_motion_polar.pdf)
