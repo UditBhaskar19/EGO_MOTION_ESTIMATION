@@ -54,7 +54,7 @@ Basically we are computing **$vr_{pred} = -( v_x * cos(theta_{meas}) + v_y * sin
 ### 6. Results , Plots and Some Observations regarding Plots ( RadarScenes - scene 105 )
    - **Ego motion estimation output Plot** : The estimated yaw-rate seems to be more noisy than the estimated vx<br>
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/2_plots_results.PNG)
-<br><br>
+<br>
 
    - **Comparing OLS and KF estimates** :<br>
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/2_egomotion_radar_polar/readme_artifacts/1_plots_results.PNG)
