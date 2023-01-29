@@ -14,7 +14,7 @@ In this project [nuScenes](https://www.nuscenes.org/) dataset is used for valida
 
 
 ### 2. Inputs Considered and Required Outputs
-The inputs are the radar measurements in polar coordinates. A detailed summary of all the required inputs and the outputs are as follows.
+A detailed summary of all the required inputs and the outputs are as follows.
 <br>
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/3_egomotion_radar_cartesian/readme_artifacts/2_inputs_outputs.PNG)
 
@@ -27,15 +27,15 @@ The below animation is a brief sequence of radar frames. It can be observed that
 
 
 ### 4. High Level Architecture
-   - **Stationary Measurement Identification** : The stationary measurements are identified. First the predicted range-rate for stationarity case at each measurement (x,y) location is computed. If the measurement range-rate and the predicted range-rate is 'close' within a certain margin, then that measurement is considered for further processing. It may happen that the wheel speed based ego-motion is corrupted since the wheel is prone to slipping and skidding, in such cases the estimated ego-motion in the previous time t-1 is utilized for computing the predicted range-rate.<br>
-   - **Clutter Removal by RANSAC** : After an preliminary selection of the stationary measurements, Random Sample Consensus (RANSAC) is used to remove clutter measurements.<br>
-   - **Radar Ego-motion Computation** : Since radar gives only range-rate which is the radial component of the velocity vector ( NO orthogonal velocity component ) a full 3DOF ego motion is not possible using a single radar. Here we estimate translational radar ego-motion (vx, vy) using the method of Ordinary Least Squares.<br>
+Since the measurements are filtered and each measurement has information regarding its dynamic status, the architecture is relatively simplier than the architecture for ego-motion estimation from raw radar point cloud project. The main components are as follows:
+   - **Coordinate Transformation of measurements from sensor frame to vehicle frame** : <br> The measurements are first transformed from sensor frame to vehicle frame
+   - **Stationary Measurement Identification** : <br> The measurements are further gated with the predicted estimate of the ego-motion. Only the measurements which are gated are considered for further processing
    - **Vehicle Ego-motion estimation** : Next the ego motion is computed w.r.t the wheel base center where it is assumed that the lateral velocity component is 0 ( vy = 0 )<br><br>
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/3_egomotion_radar_cartesian/readme_artifacts/4_architecture.PNG)
 
 
-### 6. Results , Plots and Some Observations regarding Plots ( RadarScenes - scene 105 )
-   - **Ego motion estimation output Plot** : The estimated yaw-rate seems to be more noisy than the estimated vx<br>
+### 6. Results & Plots ( RadarScenes - scene 105 )
+   - **estimation output plot for scene - 0061** : <br>
 ![](https://github.com/UditBhaskar19/EGO_MOTION_ESTIMATION/blob/main/3_egomotion_radar_cartesian/readme_artifacts/5_1_0061_all_plots.PNG)
 
 
