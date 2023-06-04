@@ -13,8 +13,8 @@ sig = 1.3
 chi_sq = sig ** 2
 
 # degree of freedom for eg-motion estimation
-mode = '2dof'
-# mode = '3dof'
+# mode = '2dof'
+mode = '3dof'
 
 # constants
 rad2deg = 180/np.pi
